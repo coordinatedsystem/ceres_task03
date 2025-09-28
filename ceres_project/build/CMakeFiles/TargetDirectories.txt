@@ -1,0 +1,3 @@
+/home/coordsys/zbx/ceres_project/build/CMakeFiles/videoCurveFit.dir
+/home/coordsys/zbx/ceres_project/build/CMakeFiles/edit_cache.dir
+/home/coordsys/zbx/ceres_project/build/CMakeFiles/rebuild_cache.dir
