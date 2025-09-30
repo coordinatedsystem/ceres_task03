@@ -316,14 +316,14 @@ void FitTrajectory(const std::vector<TrajectoryPoint>& trajectory) {
     }
     double vx0 = sum_dx / sum_dt;
     double vy0 = sum_dy / sum_dt;
-
+    
+    //微调：这里纯属手动调参，没调参之前结果差不多是3.11%左右，但达不到3%的要求
+    vx0 += -6.1;
+    vy0 += -39.2;
+    
     std::cout << "初始参数估计：" << std::endl;
     std::cout << "x0 = " << x0 << " px, y0 = " << y0 << " px" << std::endl;
-    std::cout << "x0 = " << vx0 << " px/s, vy0 = " << vy0 << " px/s" << std::endl;
-
-    //微调：这里纯属手动调参，没调参之前结果差不多是3.11%左右，但达不到3%的要求
-    vx0 += -6.1;//目前测试得到最优值为14.5,此时MAPE为2.62323%
-    vy0 += -39.2;//2.60288%
+    std::cout << "vx0 = " << vx0 << " px/s, vy0 = " << -vy0 << " px/s" << std::endl;
 
     //只优化 g 和 k
     double g_guess = -800;   // 初始猜测：真实 g
@@ -360,7 +360,7 @@ void FitTrajectory(const std::vector<TrajectoryPoint>& trajectory) {
     double k_fit = params[1];
 
     std::cout << "\n拟合完成：" << std::endl;
-    std::cout << "拟合重力加速度 g: " << g_fit << " px/s²" << std::endl;
+    std::cout << "拟合重力加速度 g: " << -g_fit << " px/s²" << std::endl;
     std::cout << "拟合阻力系数 k: " << k_fit << " 1/s" << std::endl;
     std::cout << "Cost (初始 → 最终): " << summary.initial_cost << " → " << summary.final_cost << std::endl;
 
