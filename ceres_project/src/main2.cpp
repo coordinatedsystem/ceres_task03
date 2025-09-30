@@ -325,8 +325,6 @@ void FitTrajectory(const std::vector<TrajectoryPoint>& trajectory) {
     std::cout << "x0 = " << x0 << " px, y0 = " << y0 << " px" << std::endl;
     std::cout << "vx0 = " << vx0 << " px/s, vy0 = " << -vy0 << " px/s" << std::endl;
 
-    
-
     //只优化 g 和 k
     double g_guess = -800;  
     double k_guess = 0.1;  
