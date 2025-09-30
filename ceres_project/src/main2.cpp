@@ -323,7 +323,7 @@ void FitTrajectory(const std::vector<TrajectoryPoint>& trajectory) {
     
     std::cout << "初始参数估计：" << std::endl;
     std::cout << "x0 = " << x0 << " px, y0 = " << y0 << " px" << std::endl;
-    std::cout << "x0 = " << vx0 << " px/s, vy0 = " << vy0 << " px/s" << std::endl;
+    std::cout << "vx0 = " << vx0 << " px/s, vy0 = " << -vy0 << " px/s" << std::endl;
 
     
 
