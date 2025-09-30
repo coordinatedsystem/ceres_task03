@@ -55,3 +55,9 @@
 x0 = 163 px, y0 = 127 px
 
 vx0 = 249.9 px/s, vy0 = 343.2 px/s
+
+
+电脑参数
+----
+<img width="578" height="256" alt="image" src="https://github.com/user-attachments/assets/b25c99fc-90ac-472b-a702-ac68486e3d7f" />
+
